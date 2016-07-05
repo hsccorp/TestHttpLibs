@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TestHttpLibs</string>
+    <string name="title_activity_volley">Volley</string>
+    <string name="title_activity_etrofit">etrofitActivity</string>
+    <string name="title_activity_retrofit">Retrofit</string>
+    <string name="title_activity_ok_http">OkHttp</string>
 </resources>

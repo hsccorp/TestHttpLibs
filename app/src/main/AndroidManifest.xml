@@ -17,7 +17,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".volley.VolleyActivity"></activity>
+        <activity
+            android:name=".volley.VolleyActivity"
+            android:label="@string/title_activity_volley"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aggarwalankur.testhttplibs.MainActivity" />
+        </activity>
+        <activity
+            android:name=".retrofit.RetrofitActivity"
+            android:label="@string/title_activity_retrofit"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aggarwalankur.testhttplibs.MainActivity" />
+        </activity>
+        <activity
+            android:name=".okhttp.OkHttpActivity"
+            android:label="@string/title_activity_ok_http"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aggarwalankur.testhttplibs.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
