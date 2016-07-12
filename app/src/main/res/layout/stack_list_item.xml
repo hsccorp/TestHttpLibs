@@ -6,13 +6,14 @@
     android:layout_height="wrap_content"
     card_view:cardElevation="@dimen/cardview_default_elevation"
     card_view:cardCornerRadius="@dimen/cardview_default_radius"
-    android:padding="@dimen/item_offset">
+    android:padding="@dimen/item_offset"
+    android:paddingBottom="@dimen/item_offset">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/avatar"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -23,11 +24,13 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18dp"
             android:text="Test Question"
             android:gravity="left|center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
             android:layout_toRightOf="@id/avatar"/>
 
     </RelativeLayout>
