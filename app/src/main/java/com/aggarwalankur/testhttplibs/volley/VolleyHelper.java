@@ -76,6 +76,10 @@ public class VolleyHelper {
             // Instantiate the RequestQueue with the cache and network.
             mRequestQueue = new RequestQueue(cache, network);
 
+
+            //Alternate : Default value = 4
+            //mRequestQueue = new RequestQueue(cache, network, NETWORK_POOL_THREAD_COUNT);
+
             // Start the queue
             mRequestQueue.start();
         }

@@ -53,7 +53,7 @@ public class VolleyActivity extends AppCompatActivity implements Response.Listen
 
 
 
-    LinearLayoutManager mManager;
+    private LinearLayoutManager mManager;
 
     private VolleyAdapter mAdapter;
     private List<MovieDataItem> mDataItems;
@@ -85,9 +85,6 @@ public class VolleyActivity extends AppCompatActivity implements Response.Listen
         rView.addItemDecoration(itemDecoration);
 
 
-        //Get a request queue and make a volley request
-        requestStartTime = System.currentTimeMillis();
-
         final JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
                 fetchMoviesUrl(),
@@ -103,6 +100,9 @@ public class VolleyActivity extends AppCompatActivity implements Response.Listen
                 };
         //Required if we want to cancel the request. DO NOT use "this" as is given in many examples
         request.setTag(VolleyActivity.class);
+
+        //Get a request queue and make a volley request
+        requestStartTime = System.currentTimeMillis();
 
         VolleyHelper.getInstance(this).addToRequestQueue(request);
     }
