@@ -79,7 +79,8 @@ public class RetrofitActivity extends AppCompatActivity implements Callback {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .cache(new Cache(this.getCacheDir(), 1 * 1024 * 1024))//1MB
-                .addInterceptor(new Interceptor() {
+                //This is how we can intercept a request in Retrofit and add a common parameter if we want
+                /*.addInterceptor(new Interceptor() {
                     @Override
                     public okhttp3.Response intercept(Chain chain) throws IOException {
                         Request request = chain.request();
@@ -87,7 +88,7 @@ public class RetrofitActivity extends AppCompatActivity implements Callback {
                         request = request.newBuilder().url(url).build();
                         return chain.proceed(request);
                     }
-                })
+                })*/
                 .build();
 
 
@@ -100,7 +101,7 @@ public class RetrofitActivity extends AppCompatActivity implements Callback {
 
         RequestInterface moviesInterface = retrofit.create(RequestInterface.class);
 
-        mMoviesCall = moviesInterface.getMovieResults();
+        mMoviesCall = moviesInterface.getMovieResults(MOVIE_DB_API_KEY);
 
         //Get a request queue and make a retrofit request
         requestStartTime = System.currentTimeMillis();
