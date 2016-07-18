@@ -4,4 +4,5 @@
     <string name="title_activity_etrofit">etrofitActivity</string>
     <string name="title_activity_retrofit">Retrofit</string>
     <string name="title_activity_ok_http">OkHttp</string>
+    <string name="title_activity_http_url_conxn">HttpUrlConxnActivity</string>
 </resources>

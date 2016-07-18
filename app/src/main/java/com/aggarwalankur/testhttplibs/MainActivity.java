@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.aggarwalankur.testhttplibs.httpurlconxn.HttpUrlConxnActivity;
 import com.aggarwalankur.testhttplibs.okhttp.OkHttpActivity;
 import com.aggarwalankur.testhttplibs.retrofit.RetrofitActivity;
 import com.aggarwalankur.testhttplibs.volley.VolleyActivity;
@@ -19,7 +20,7 @@ import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mVolleyButton, mRetrofitButton, mOkHttpButton;
+    private Button mVolleyButton, mRetrofitButton, mOkHttpButton, mHttpUrlConxnButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mVolleyButton = (Button) findViewById(R.id.button_volley);
         mRetrofitButton = (Button) findViewById(R.id.button_retrofit);
         mOkHttpButton = (Button) findViewById(R.id.button_okhttp);
+        mHttpUrlConxnButton= (Button) findViewById(R.id.button_httpurlconnection);
 
         mVolleyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent okHttpIntent = new Intent(MainActivity.this, OkHttpActivity.class);
                 startActivity(okHttpIntent);
+            }
+        });
+
+        mHttpUrlConxnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent httpUrlConxnIntent = new Intent(MainActivity.this, HttpUrlConxnActivity.class);
+                startActivity(httpUrlConxnIntent);
             }
         });
     }

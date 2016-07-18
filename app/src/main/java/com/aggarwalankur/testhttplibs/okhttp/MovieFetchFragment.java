@@ -92,15 +92,16 @@ public class MovieFetchFragment extends Fragment {
             }
 
 
-
-
-
             try {
                 Request request = new Request.Builder()
                         //.cacheControl(cache)
                         .url(params[0])
                         .build();
                 Response response = client.newCall(request).execute();
+
+                if(isCancelled()){
+                    return null;
+                }
 
                 String responseJson = response.body().string();
 
