@@ -1,12 +1,20 @@
-A demo project to test various Http libs available in Android.
+A demo project to test various Http libs available in Android. Libraries demo'ed in this are : HttpURLConnection, OK HTTP, Retrofit, Volley.
 
-To use this demo, you need an API key (by signing up here : https://www.themoviedb.org/documentation/api )
+The demo has been organised so that each component is readily usable.
+
+To view code for HttpURLConnection, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/httpurlconxn
+To view code for OK HTTP, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/okhttp
+To view code for Retrofit, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/retrofit
+To view code for Volley, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/volley
+
+-----
+
+To use this demo, you need an API key (by signing up here : https://www.themoviedb.org/documentation/api ). This API key is not required for Volley, Retrofit, OK HTTP or HttpURLConnection, but is required for the HTTP requests which are used to demonstrate the code and image loading capabilities in this demo.
 
 Once you have the API key, place your API key in the following file :
 %USERHOME%\.gradle\gradle.properties
 
 The above gradle.properties should include a line like this :
-
 MyMovieDbApiKey = "your-api-key"
 
 -----
