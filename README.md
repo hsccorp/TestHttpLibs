@@ -3,9 +3,18 @@ A demo project to test various Http libs available in Android. Libraries demo'ed
 The demo has been organised so that each component is readily usable.
 
 To view code for HttpURLConnection, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/httpurlconxn
+
 To view code for OK HTTP, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/okhttp
+
 To view code for Retrofit, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/retrofit
+
 To view code for Volley, go to the folder : app/src/main/java/com/aggarwalankur/testhttplibs/volley
+
+-----
+Volley has been added as a github project, so you may use the command :
+'git clone https://android.googlesource.com/platform/frameworks/volley'
+
+to clone the project and then import it as a dependency project
 
 -----
 
